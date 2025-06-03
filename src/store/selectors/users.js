@@ -1,0 +1,1 @@
+export const selectUsersData = (store) => store.users

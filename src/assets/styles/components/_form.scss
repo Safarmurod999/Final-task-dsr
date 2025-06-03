@@ -1,0 +1,202 @@
+@use "../base/mixins" as mixin;
+.form {
+  padding: 30px 0 0 0;
+  &.flex-row {
+    @include mixin.flex-row(center, flex-start, 20px);
+  }
+  &.flex-col {
+    @include mixin.flex-col(center, flex-start, 20px);
+  }
+  div {
+    width: 100%;
+  }
+  &.w-full {
+    width: 100%;
+  }
+  &-row {
+    display: flex;
+    gap: 20px;
+    &.flex-row {
+      @include mixin.flex-row(center, flex-start, 20px);
+    }
+    &.flex-col {
+      @include mixin.flex-col(center, flex-start, 20px);
+    }
+  }
+  &-control {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &.w-full {
+      width: 100%;
+    }
+    &.w-50 {
+      width: 50%;
+    }
+  }
+  &-label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &-input,&-textarea {
+    padding: 8px 12px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    border-radius: 6px;
+    font-size: 14px;
+
+    &:focus {
+      outline: 2px solid var(--primary-color);
+    }
+  }
+  &-textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  &-select {
+    padding: 8px 16px;
+    background-color: transparent;
+    // border: 1px solid var(--border-color);
+    color: var(--text-color);
+    background-color: var(--secondary-bg-color);
+    // border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    &:focus {
+      outline: 2px solid var(--primary-color);
+    }
+    // &:hover {
+    //   background-color: #5c49bb;
+    // }
+  }
+  &-switch {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    input {
+      display: none;
+    }
+
+    .toggle {
+      position: relative;
+      width: 44px;
+      height: 24px;
+      background-color: #e5e7eb;
+      border-radius: 9999px;
+      transition: background-color 0.2s;
+      z-index: 1;
+      &:focus {
+        outline: none;
+      }
+
+      &.checked {
+        background-color: var(--primary-color);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border: 1px solid #d1d5db;
+        border-radius: 9999px;
+        transition: all 0.2s;
+        z-index: 2;
+        .rtl & {
+          transform: translateX(0);
+        }
+      }
+
+      &.checked::after {
+        transform: translateX(99%);
+        border-color: #fff;
+      }
+    }
+  }
+
+  &-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px 16px;
+    max-width: 150px;
+    height: 40px;
+    background-color: var(--primary-color);
+
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    span {
+      color: white;
+      text-transform: capitalize;
+    }
+    svg {
+      color: white;
+    }
+    &:hover {
+      background-color: #5c49bb;
+    }
+  }
+}
+.multi-image-upload {
+  padding: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  max-width: 925px;
+  margin: auto;
+  
+  .dropzone {
+    padding: 20px;
+    border: 2px dashed #aaa;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #f9f9f9;
+    }
+  }
+
+  .image-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+
+    .image-item {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border-radius: 8px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .remove-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background: red;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.admin-layout {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  background-color: var(--secondary-bg-color);
+  main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: calc(100% - 250px);
+    min-height: 100vh;
+    padding: 0;
+    padding-top: 80px;
+    background-color: var(--secondary-bg-color);
+  }
+  .admin-content {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.admin-container {
+  padding: 30px;
+  height: 100%;
+}

@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+html[data-theme="light"] {
+  --text-color: #18171c;
+  --text-light-color: #666;
+  --primary-color: #2846e6;
+  --secondary-bg-color: #fff;
+  --bg-color: #f2f2f2;
+  --bg-color-2: #f5f5f5;
+  --lightgray: #b4b4b4;
+  --white: #fff;
+  --body-bg: #ececec;
+  --footer-bg: #1f1f1f;
+  --border-color: #d9d9d9;
+}
+html[data-theme="dark"] {
+  --text-color: #fff;
+  --text-light-color: #e3e1e1;
+  --primary-color: #2846e6;
+  --secondary-bg-color: #292929;
+  --bg-color: #1f1f1f;
+  --bg-color-2: #333333;
+  --lightgray: #5d5d5d;
+  --white: #1f1f1f;
+  --body-bg: #1f1f1f;
+  --footer-bg: #1f1f1f;
+  --border-color: rgb(101, 101, 101);
+}

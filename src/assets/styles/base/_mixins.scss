@@ -1,0 +1,23 @@
+@mixin flex-row($align: "center", $justify: "center", $gap: 0) {
+  display: flex;
+  flex-direction: row;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin flex-col($align: "center", $justify: "center", $gap: 0) {
+  display: flex;
+  flex-direction: column;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin flex-center($gap: 0, $wrap: "nowrap") {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: $wrap;
+  gap: $gap;
+}

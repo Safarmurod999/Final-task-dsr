@@ -1,0 +1,28 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  &__title {
+    font-size: 72px;
+    line-height: 80px;
+    font-weight: 800;
+    text-align: center;
+    color: var(--primary-color);
+  }
+  a {
+    display: block;
+    text-align: center;
+    max-width: 250px;
+    padding: 20px 40px;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: #fff;
+    background-color: var(--primary-color);
+  }
+  img{
+    display: block;
+    margin: 0 auto 30px;
+    width: 350px;
+  }
+}
